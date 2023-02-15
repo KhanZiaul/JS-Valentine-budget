@@ -1,54 +1,36 @@
+function totalPrice(idOne,idTwo,idThree){
+    
+    const quantityInString = document.getElementById(idOne).value;
+
+    const quantityInNmuber = parseInt(quantityInString);
+
+    const priceInString = document.getElementById(idTwo).innerText;
+
+    const priceInNmuber = parseInt(priceInString);
+
+    const totalPrice = priceInNmuber * quantityInNmuber;
+
+    const price = document.getElementById(idThree);
+
+    price.innerText = totalPrice;
+}
+
+
+
 document.getElementById('kitkat-buy-btn').addEventListener('click',function(){
 
-    const kitkatQuantityString = document.getElementById('kitkat-quantity').value;
-
-    const kitkatQuantityInNmuber = parseInt(kitkatQuantityString);
-
-    const kitkatPriceString = document.getElementById('kitkat-price').innerText;
-
-    const kitkatPriceInNmuber = parseInt(kitkatPriceString);
-
-    const kitkatTotalPrice = kitkatPriceInNmuber * kitkatQuantityInNmuber;
-
-    const chocolatePrice = document.getElementById('chocolate');
-
-    chocolatePrice.innerText = kitkatTotalPrice;
+    totalPrice('kitkat-quantity','kitkat-price','chocolate')
 
 });
 
 document.getElementById('rose-buy-btn').addEventListener('click',function(){
 
-    const roseQuantityString = document.getElementById('rose-quantity').value;
-
-    const roseQuantityInNmuber = parseInt(roseQuantityString);
-
-    const rosePriceString = document.getElementById('rose-price').innerText;
-
-    const rosePriceInNmuber = parseInt(rosePriceString);
-
-    const roseTotalPrice = rosePriceInNmuber * roseQuantityInNmuber;
-
-    const rosePrice = document.getElementById('rose');
-
-    rosePrice.innerText = roseTotalPrice;
+    totalPrice('rose-quantity','rose-price','rose')
 
 });
 
-
 document.getElementById('diary-buy-btn').addEventListener('click',function(){
 
-    const diaryQuantityString = document.getElementById('diary-quantity').value;
-
-    const diaryQuantityInNmuber = parseInt(diaryQuantityString);
-
-    const diaryPriceString = document.getElementById('diary-price').innerText;
-
-    const diaryPriceInNmuber = parseInt(diaryPriceString);
-
-    const diaryTotalPrice = diaryPriceInNmuber * diaryQuantityInNmuber;
-
-    const diaryPrice = document.getElementById('diary');
-
-    diaryPrice.innerText = diaryTotalPrice;
+    totalPrice('diary-quantity','diary-price','diary')
 
 });
