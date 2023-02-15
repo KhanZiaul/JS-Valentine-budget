@@ -33,3 +33,22 @@ document.getElementById('rose-buy-btn').addEventListener('click',function(){
     rosePrice.innerText = roseTotalPrice;
 
 });
+
+
+document.getElementById('diary-buy-btn').addEventListener('click',function(){
+
+    const diaryQuantityString = document.getElementById('diary-quantity').value;
+
+    const diaryQuantityInNmuber = parseInt(diaryQuantityString);
+
+    const diaryPriceString = document.getElementById('diary-price').innerText;
+
+    const diaryPriceInNmuber = parseInt(diaryPriceString);
+
+    const diaryTotalPrice = diaryPriceInNmuber * diaryQuantityInNmuber;
+
+    const diaryPrice = document.getElementById('diary');
+
+    diaryPrice.innerText = diaryTotalPrice;
+
+});
