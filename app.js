@@ -15,3 +15,21 @@ document.getElementById('kitkat-buy-btn').addEventListener('click',function(){
     chocolatePrice.innerText = kitkatTotalPrice;
 
 });
+
+document.getElementById('rose-buy-btn').addEventListener('click',function(){
+
+    const roseQuantityString = document.getElementById('rose-quantity').value;
+
+    const roseQuantityInNmuber = parseInt(roseQuantityString);
+
+    const rosePriceString = document.getElementById('rose-price').innerText;
+
+    const rosePriceInNmuber = parseInt(rosePriceString);
+
+    const roseTotalPrice = rosePriceInNmuber * roseQuantityInNmuber;
+
+    const rosePrice = document.getElementById('rose');
+
+    rosePrice.innerText = roseTotalPrice;
+
+});
