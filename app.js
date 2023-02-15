@@ -60,3 +60,33 @@ function totalIs(){
 
 }
 
+document.getElementById('apply').addEventListener('click',function(){
+    
+    const promoCode = document.getElementById('promo-code');
+
+    if(promoCode.value === '101'){
+
+        const totalIs = document.getElementById('total');
+
+        const allTotalInstring = document.getElementById('all-total');
+
+        const totalInString = totalIs.innerText;
+
+        const totalInNumber = parseInt(totalInString);
+
+        const total = totalInNumber - ((10*totalInNumber)/100);
+
+        allTotalInstring.innerText = total;
+    }
+
+    else{
+
+        alert('You enter wrong Promo-Code');
+
+        const totalIs = document.getElementById('total');
+
+        const allTotalInstring = document.getElementById('all-total');
+
+        allTotalInstring.innerText = totalIs.innerText;
+    }
+});
