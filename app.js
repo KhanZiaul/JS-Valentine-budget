@@ -58,6 +58,10 @@ function totalIs(){
 
   total.innerText = totals;
 
+  const allTotalInstring = document.getElementById('all-total');
+
+  allTotalInstring.innerText = totals;
+
 }
 
 document.getElementById('apply').addEventListener('click',function(){
@@ -76,6 +80,17 @@ document.getElementById('apply').addEventListener('click',function(){
 
         const total = totalInNumber - ((10*totalInNumber)/100);
 
+        const budget = document.getElementById('budget');
+
+        const budgetInString = budget.innerText;
+
+        const budgetInNumber = parseInt(budgetInString);
+
+        if(budgetInNumber< total){
+
+            alert('Warning !!!! You are out of your budget');
+        }
+
         allTotalInstring.innerText = total;
     }
 
@@ -83,10 +98,5 @@ document.getElementById('apply').addEventListener('click',function(){
 
         alert('You enter wrong Promo-Code');
 
-        const totalIs = document.getElementById('total');
-
-        const allTotalInstring = document.getElementById('all-total');
-
-        allTotalInstring.innerText = totalIs.innerText;
     }
 });
